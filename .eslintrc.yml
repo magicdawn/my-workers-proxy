@@ -1,0 +1,16 @@
+# root
+root: true
+
+env:
+  browser: true
+  node: true
+  serviceworker: true
+
+parserOptions:
+  sourceType: module
+
+rules:
+  camelcase: off
+
+extends:
+  - '@magicdawn'

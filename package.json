@@ -1,0 +1,55 @@
+{
+  "name": "workers-proxy",
+  "version": "1.1.7",
+  "description": "Lightweight reverse proxy implemented with Cloudflare Workers.",
+  "main": "dist/main.js",
+  "scripts": {
+    "dist": "rollup -c",
+    "test": "wrangler preview --watch",
+    "build": "wrangler build",
+    "deploy": "wrangler publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siujoeng-Lau/Workers-Proxy.git"
+  },
+  "keywords": [
+    "reverse-proxy",
+    "cloudflare-workers",
+    "serverless"
+  ],
+  "author": "Siujoeng-Lau <admin@siujoeng-lau.com> (https://siujoeng-lau.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Siujoeng-Lau/Workers-Proxy/issues"
+  },
+  "homepage": "https://github.com/Siujoeng-Lau/Workers-Proxy#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@magicdawn/eslint-config": "latest",
+    "@magicdawn/prettier-config": "latest",
+    "babel-plugin-lodash": "^3.3.4",
+    "eslint": "^6.8.0",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "prettier": "latest",
+    "rollup": "^1.31.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,less,vue}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "urijs": "^1.19.2"
+  }
+}
