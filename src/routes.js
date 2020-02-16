@@ -14,6 +14,14 @@ const routes = [
     location: '/ip',
     proxyPass: 'http://2000019.ip138.com/',
   },
+  {
+    location: '/g',
+    proxyPass: 'https://www.google.com/',
+  },
+  {
+    location: '/google',
+    proxyPass: 'https://www.google.com/',
+  },
 ]
 
 export default routes
